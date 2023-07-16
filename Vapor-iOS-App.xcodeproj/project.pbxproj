@@ -8,17 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		4383A7982A62EC86005C2461 /* Vapor_iOS_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4383A7972A62EC86005C2461 /* Vapor_iOS_AppApp.swift */; };
-		4383A79A2A62EC86005C2461 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4383A7992A62EC86005C2461 /* ContentView.swift */; };
+		4383A79A2A62EC86005C2461 /* SongList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4383A7992A62EC86005C2461 /* SongList.swift */; };
 		4383A79C2A62EC87005C2461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4383A79B2A62EC87005C2461 /* Assets.xcassets */; };
 		4383A79F2A62EC87005C2461 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4383A79E2A62EC87005C2461 /* Preview Assets.xcassets */; };
+		4383A7AA2A62EDA0005C2461 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4383A7A92A62EDA0005C2461 /* Song.swift */; };
+		4383A7AC2A62EE44005C2461 /* SongListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4383A7AB2A62EE44005C2461 /* SongListViewModel.swift */; };
+		4383A7AE2A62F050005C2461 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4383A7AD2A62F050005C2461 /* HttpClient.swift */; };
+		4383A7B02A62F406005C2461 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4383A7AF2A62F406005C2461 /* Constants.swift */; };
+		4383A7B22A62FCC5005C2461 /* ModalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4383A7B12A62FCC5005C2461 /* ModalType.swift */; };
+		4383A7B42A62FF05005C2461 /* AddUpdateSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4383A7B32A62FF05005C2461 /* AddUpdateSong.swift */; };
+		4383A7B62A630085005C2461 /* AddUpdateSongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4383A7B52A630085005C2461 /* AddUpdateSongViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4383A7942A62EC86005C2461 /* Vapor-iOS-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vapor-iOS-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4383A7972A62EC86005C2461 /* Vapor_iOS_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vapor_iOS_AppApp.swift; sourceTree = "<group>"; };
-		4383A7992A62EC86005C2461 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4383A7992A62EC86005C2461 /* SongList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongList.swift; sourceTree = "<group>"; };
 		4383A79B2A62EC87005C2461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4383A79E2A62EC87005C2461 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4383A7A92A62EDA0005C2461 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		4383A7AB2A62EE44005C2461 /* SongListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewModel.swift; sourceTree = "<group>"; };
+		4383A7AD2A62F050005C2461 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		4383A7AF2A62F406005C2461 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4383A7B12A62FCC5005C2461 /* ModalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalType.swift; sourceTree = "<group>"; };
+		4383A7B32A62FF05005C2461 /* AddUpdateSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateSong.swift; sourceTree = "<group>"; };
+		4383A7B52A630085005C2461 /* AddUpdateSongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUpdateSongViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +65,11 @@
 		4383A7962A62EC86005C2461 /* Vapor-iOS-App */ = {
 			isa = PBXGroup;
 			children = (
+				4383A7A72A62ECF8005C2461 /* Views */,
+				4383A7A62A62ECE3005C2461 /* View Models */,
+				4383A7A52A62ECDC005C2461 /* Models */,
+				4383A7A82A62ED07005C2461 /* Utilities */,
 				4383A7972A62EC86005C2461 /* Vapor_iOS_AppApp.swift */,
-				4383A7992A62EC86005C2461 /* ContentView.swift */,
 				4383A79B2A62EC87005C2461 /* Assets.xcassets */,
 				4383A79D2A62EC87005C2461 /* Preview Content */,
 			);
@@ -65,6 +82,42 @@
 				4383A79E2A62EC87005C2461 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4383A7A52A62ECDC005C2461 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4383A7A92A62EDA0005C2461 /* Song.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4383A7A62A62ECE3005C2461 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				4383A7AB2A62EE44005C2461 /* SongListViewModel.swift */,
+				4383A7B52A630085005C2461 /* AddUpdateSongViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		4383A7A72A62ECF8005C2461 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4383A7992A62EC86005C2461 /* SongList.swift */,
+				4383A7B32A62FF05005C2461 /* AddUpdateSong.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4383A7A82A62ED07005C2461 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4383A7AF2A62F406005C2461 /* Constants.swift */,
+				4383A7AD2A62F050005C2461 /* HttpClient.swift */,
+				4383A7B12A62FCC5005C2461 /* ModalType.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +190,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4383A79A2A62EC86005C2461 /* ContentView.swift in Sources */,
+				4383A7AE2A62F050005C2461 /* HttpClient.swift in Sources */,
+				4383A7B62A630085005C2461 /* AddUpdateSongViewModel.swift in Sources */,
+				4383A7B42A62FF05005C2461 /* AddUpdateSong.swift in Sources */,
+				4383A7B22A62FCC5005C2461 /* ModalType.swift in Sources */,
+				4383A7AA2A62EDA0005C2461 /* Song.swift in Sources */,
+				4383A7AC2A62EE44005C2461 /* SongListViewModel.swift in Sources */,
+				4383A79A2A62EC86005C2461 /* SongList.swift in Sources */,
 				4383A7982A62EC86005C2461 /* Vapor_iOS_AppApp.swift in Sources */,
+				4383A7B02A62F406005C2461 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
