@@ -21,7 +21,7 @@ final class AddUpdateSongViewModel: ObservableObject {
     }
 
     init() { }
-    init(currentSong:Song) {
+    init(currentSong: Song) {
         songTitle = currentSong.title
         songID = currentSong.id
     }
@@ -33,15 +33,25 @@ final class AddUpdateSongViewModel: ObservableObject {
         try await HttpClient.shared.sendData(to: url, data: song, httpMethod: HttpMethods.POST.rawValue)
     }
 
+    func updateSong() async throws {
+        let stringURL = Constant.baseURL + Endpoints.songs
+        guard let url = URL(string: stringURL) else { throw HttpError.badURL }
+        let songToUpdate = Song(id: songID, title: songTitle)
+        try await HttpClient.shared.sendData(to: url, data: songToUpdate, httpMethod: HttpMethods.PUT.rawValue)
+    }
+
     func addUpdateSong(completion: @escaping () -> Void) {
         Task {
             do {
-                try await addSong()
+                if isUpdating {
+                    try await updateSong()
+                } else {
+                    try await addSong()
+                }
             } catch {
                 print("❌ ERROR: \(error)")
             }
             completion()
         }
     }
-
 }
